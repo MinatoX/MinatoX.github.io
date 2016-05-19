@@ -1,3 +1,0 @@
-https://htmlpreview.github.io/?https://github.com/MinatoX/A-Different-Take-on-Pong-Web/blob/master/playgame/index.html
-
-Link above will run the game

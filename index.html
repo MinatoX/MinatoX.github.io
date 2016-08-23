@@ -19,7 +19,9 @@
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
-    var releaseVer = "Release";
+    function change(release) {
+      var releaseVer = release;
+    }
   var Module = {
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
@@ -30,6 +32,7 @@
     
   };
 </script>
+<button onClick = "change('Release')">Play Home</button>
 <script src="Release/UnityLoader.js"></script>
 
   </body>

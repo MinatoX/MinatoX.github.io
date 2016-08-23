@@ -19,13 +19,14 @@
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
+    var releaseVer = "Release";
   var Module = {
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
     compatibilitycheck: null,
-    dataUrl: "Release/Web.data",
-    codeUrl: "Release/Web.js",
-    memUrl: "Release/Web.mem",
+    dataUrl: releaseVer + "/Web.data",
+    codeUrl: releaseVer + "/Web.js",
+    memUrl: releaseVer + "/Web.mem",
     
   };
 </script>

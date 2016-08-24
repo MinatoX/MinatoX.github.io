@@ -21,7 +21,7 @@
     <script type='text/javascript'>
     function change(release) {
       var releaseVer = release;
-    }
+    
   var Module = {
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
@@ -29,20 +29,13 @@
     dataUrl: releaseVer + "/Web.data",
     codeUrl: releaseVer + "/Web.js",
     memUrl: releaseVer + "/Web.mem",
-    
   };
-  
-  function startLoad() {
-    document.getElementById('startLoader').style.display = "block";
   }
   
 </script>
-<button onClick = "change('Release')">Play Home</button>
-<button onClick = "startLoad()">RELOAD GAME</button>
+<button onClick = "change('Release')" <script src="Release/UnityLoader.js"></script>>Play Home</button>
 
-<div id="startLoader" style = "display:none;">
-<script src="Release/UnityLoader.js"></script>
-</div>
+<!--<script src="Release/UnityLoader.js"></script>-->
 
   </body>
 </html>

@@ -31,9 +31,18 @@
     memUrl: releaseVer + "/Web.mem",
     
   };
+  
+  function startLoad() {
+    document.getElementById('startLoader').style.display = "block";
+  }
+  
 </script>
 <button onClick = "change('Release')">Play Home</button>
-<button onClick = <script src="Release/UnityLoader.js">>RELOAD GAME</script></button>
+<button onClick = "startLoad()">RELOAD GAME</button>
+
+<div id="startLoader" style = "display:none;">
+<script src="Release/UnityLoader.js"></script>
+</div>
 
   </body>
 </html>

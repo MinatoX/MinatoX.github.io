@@ -35,9 +35,9 @@
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
     compatibilitycheck: null,
-    dataUrl: "Release/Web.data",
-    codeUrl: "Release/Web.js",
-    memUrl: "Release/Web.mem",
+    dataUrl: releaseVer + "/Web.data",
+    codeUrl: releaseVer + "/Web.js",
+    memUrl: releaseVer + "/Web.mem",
   };
   
     var Module2 = {
@@ -49,10 +49,25 @@
     memUrl: "Release2/Web.mem",
   };
   
+  function changeRelease(newRelease) {
+    releaseVer = newRelease;
+  }
+  
 </script>
 
+
 <!--Create a new canvas for next game?-->
-    <script src="Release2/UnityLoader.js"></script>
-  
+    <script src="Release/UnityLoader.js"></script>
+    
+     <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+      <br>
+      <div class="logo"></div>
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+      <div class="title">Project HOME</div>
+    </div>
+    <script>
+    changeRelease("Release2");
+  </script>
   </body>
 </html>

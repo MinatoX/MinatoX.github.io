@@ -7,8 +7,16 @@ function initCanvas() {
   if (!isInit) {
     gameCanvas = document.getElementById("gameCanvas");
     gameCanvas.width = 600;
-    gameCanvas.height = 800;
+    gameCanvas.height = 600;
     isInit = true;
     alert("Canvas initialized!");
+  } else {
+    drawImg();
   }
+}
+
+function drawImg() {
+  var testImg = new Image();
+  
+  //testImg.src = "img source here";
 }

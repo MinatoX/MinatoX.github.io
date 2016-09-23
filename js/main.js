@@ -6,20 +6,14 @@ var draw;
 var isInit = false;
 
 //Game Vars
-var bar1 = {
-  xPos = 0,
-  yPos = 225
-};
+var bar1X = 0;
+var bar2X = 225;
 
-var bar2 = {
-  xPos = 500,
-  yPos = 225
-};
+var bar2X = 500;
+var bar2Y = 225;
 
-var ball = {
-  xPos = 250,
-  yPos = 250
-};
+var ballX = 250;
+var ballY = 250;
 
 //Game graphics
 var testImg = new Image();
@@ -66,9 +60,9 @@ function drawImg() {
   barsWin.src = "img/pongimg/BarsWin.png";
   ballWins.src = "img/pongimg/BallWins.png";
 
-  draw.drawImage(bar, bar1.xPos, bar1.yPos);
-  draw.drawImage(bar, bar2.xPos, bar2.yPos);
-  draw.drawImage(ball, ball.xPos, ball.yPos);
+  draw.drawImage(bar, bar1X, bar1Y);
+  draw.drawImage(bar, bar2X, bar2Y);
+  draw.drawImage(ball, ballX, ballY);
   
 }
 

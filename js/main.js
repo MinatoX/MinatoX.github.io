@@ -33,15 +33,11 @@ function initCanvas() {
 }
 
 function drawImg() {
-
-  
-  
-  
   draw = gameCanvas.getContext("2d");
   
-  testImg.src = "img/menu_back_02.png";
+  //testImg.src = "img/menu_back_02.png";
 
-  draw.drawImage(testImg, 0, 0);
+  draw.drawImage(bar, 0, 0);
   
 }
 

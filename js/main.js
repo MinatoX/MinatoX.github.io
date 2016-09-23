@@ -24,3 +24,15 @@ function drawImg() {
   draw.drawImage(testImg, 0, 0);
   
 }
+
+function checkMousePos(e) {
+ var mouseX, mouseY;
+ 
+ if (e.offsetX) {
+  mouseX = e.offsetX;
+  mouseY = e.offsetY;
+ } else if (e.layerX) {
+  mouseX = e.layerX;
+  mouseY = e.layerY;
+ }
+ }

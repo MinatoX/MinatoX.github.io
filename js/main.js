@@ -19,9 +19,25 @@ function initCanvas() {
 
 function drawImg() {
   var testImg = new Image();
+  var playerBall = new Image("img/pongimg/Ball.png");
+  var bar = new Image("img/pongimg/Bar.png");
+  var playButton = new Image("img/pongimg/Play.png");
+  var controlsButton = new Image("img/pongimg/Controls.png");
+  var mousePic = new Image("img/pongimg/Mouse.png");
+  var wasd = new Image("img/pongimg/WASD.png");
+  var arrowKeys = new Image("img/pongimg/ArrowKeys.png");
+  var highlightBox = new Image("img/pongimg/HighlightBox.png");
+  var controlsMenu = new Image("img/pongimg/ControlsMenu.png");
+  var computer = new Image("img/pongimg/Computer.png");
+  var barsWin = new Image("img/pongimg/BarsWin.png");
+  var ballWins = new Image("img/pongimg/BallWins.png");
+  
+  
+  
   draw = gameCanvas.getContext("2d");
   
   testImg.src = "img/menu_back_02.png";
+
   draw.drawImage(testImg, 0, 0);
   
 }

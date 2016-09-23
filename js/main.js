@@ -49,7 +49,7 @@ function drawImg() {
   barsWin.src = "img/pongimg/BarsWin.png";
   ballWins.src = "img/pongimg/BallWins.png";
 
-  draw.drawImage(bar, 0, 0);
+  draw.drawImage(playButton, 0, 0);
   
 }
 

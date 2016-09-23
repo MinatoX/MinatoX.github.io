@@ -13,6 +13,7 @@ function initCanvas() {
     alert("Canvas initialized!");
   } else {
     drawImg();
+    checkMousePos(e);
   }
 }
 

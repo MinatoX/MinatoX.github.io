@@ -1,8 +1,25 @@
 //Test JS file for drawing a new canvas and adding interactivity to it
 
+//Misc
 var gameCanvas;
 var draw;
 var isInit = false;
+
+//Game Vars
+var bar1 = {
+  xPos = 0
+  yPos = 225
+};
+
+var bar2 = {
+  xPos = 500
+  yPos = 225
+};
+
+var ball = {
+  xPos = 250
+  yPos = 250
+};
 
 //Game graphics
 var testImg = new Image();
@@ -49,8 +66,9 @@ function drawImg() {
   barsWin.src = "img/pongimg/BarsWin.png";
   ballWins.src = "img/pongimg/BallWins.png";
 
-  draw.drawImage(bar, 0, 0);
-  draw.drawImage(bar, 500, 0);
+  draw.drawImage(bar, bar1.xPos, bar1.yPos);
+  draw.drawImage(bar, bar2.xPos, bar2.yPos);
+  draw.drawImage(ball, ball.xPos, ball.yPos);
   
 }
 

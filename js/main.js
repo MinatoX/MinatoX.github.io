@@ -7,17 +7,17 @@ var isInit = false;
 
 //Game Vars
 var bar1 = {
-  xPos = 0
+  xPos = 0,
   yPos = 225
 };
 
 var bar2 = {
-  xPos = 500
+  xPos = 500,
   yPos = 225
 };
 
 var ball = {
-  xPos = 250
+  xPos = 250,
   yPos = 250
 };
 

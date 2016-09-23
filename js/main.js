@@ -6,18 +6,18 @@ var isInit = false;
 
 //Game graphics
 var testImg = new Image();
-var playerBall = new Image("img/pongimg/Ball.png");
-var bar = new Image("img/pongimg/Bar.png");
-var playButton = new Image("img/pongimg/Play.png");
-var controlsButton = new Image("img/pongimg/Controls.png");
-var mousePic = new Image("img/pongimg/Mouse.png");
-var wasd = new Image("img/pongimg/WASD.png");
-var arrowKeys = new Image("img/pongimg/ArrowKeys.png");
-var highlightBox = new Image("img/pongimg/HighlightBox.png");
-var controlsMenu = new Image("img/pongimg/ControlsMenu.png");
-var computer = new Image("img/pongimg/Computer.png");
-var barsWin = new Image("img/pongimg/BarsWin.png");
-var ballWins = new Image("img/pongimg/BallWins.png");
+var playerBall = new Image();
+var bar = new Image();
+var playButton = new Image();
+var controlsButton = new Image();
+var mousePic = new Image();
+var wasd = new Image();
+var arrowKeys = new Image();
+var highlightBox = new Image();
+var controlsMenu = new Image();
+var computer = new Image();
+var barsWin = new Image();
+var ballWins = new Image();
 
 function initCanvas() {
   if (!isInit) {
@@ -36,6 +36,18 @@ function drawImg() {
   draw = gameCanvas.getContext("2d");
   
   //testImg.src = "img/menu_back_02.png";
+  playerBall.src = "img/pongimg/Ball.png";
+  bar.src = "img/pongimg/Bar.png";
+  playButton.src = "img/pongimg/Play.png";
+  controlsButton.src = "img/pongimg/Controls.png";
+  mousePic.src = "img/pongimg/Mouse.png";
+  wasd.src = "img/pongimg/WASD.png";
+  arrowKeys.src = "img/pongimg/ArrowKeys.png"; 
+  highlightBox.src = "img/pongimg/HighlightBox.png";
+  controlsMenu.src = "img/pongimg/ControlsMenu.png";
+  computer.src = "img/pongimg/Computer.png";
+  barsWin.src = "img/pongimg/BarsWin.png";
+  ballWins.src = "img/pongimg/BallWins.png";
 
   draw.drawImage(bar, 0, 0);
   

@@ -35,6 +35,7 @@ function initCanvas() {
     gameCanvas = document.getElementById("gameCanvas");
     gameCanvas.width = 600;
     gameCanvas.height = 600;
+    gameCanvas.addEventListener("keypress", checkKeypress, false);
     isInit = true;
     alert("Canvas initialized!");
   } else {
@@ -78,18 +79,10 @@ function checkMousePos(e) {
  }
  }
 
-$(document).keydown(function(e) {
-    switch(e.which) {
+function checkKeypress(e) {
+  var keyCode = e.keyCode;
 
-        case 38: // up
-          bar1Y += 1;
-        break;
-
-        case 40: // down
-          bar1Y -= 1;
-        break;
-
-        default: return; // exit this handler for other keys
-    }
-    e.preventDefault(); // prevent the default action (scroll / move caret)
-});
+  if (keyCode == 88) {
+    alert("You pressed W!");
+  }
+}

@@ -73,7 +73,7 @@ function checkMousePos(e) {
   mouseY = e.layerY;
  }
   
-  alert("Mouse is positioned at X=" + mouseX + " and Y=" + mouseY);
+  //alert("Mouse is positioned at X=" + mouseX + " and Y=" + mouseY);
   
  }
 

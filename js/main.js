@@ -73,7 +73,8 @@ function checkMousePos(e) {
   mouseY = e.layerY;
  }
   
-  alert("Mouse is positioned at X=" + mouseX + " and Y=" + mouseY);
+  drawImg();
+  //alert("Mouse is positioned at X=" + mouseX + " and Y=" + mouseY);
   
  }
 
@@ -83,5 +84,5 @@ function checkKeypress(e) {
   if (keyCode == 88) {
     alert("You pressed W!");
   }
-  drawImg();
+  //drawImg();
 }

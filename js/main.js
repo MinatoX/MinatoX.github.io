@@ -77,3 +77,19 @@ function checkMousePos(e) {
   mouseY = e.layerY;
  }
  }
+
+$(document).keydown(function(e) {
+    switch(e.which) {
+
+        case 38: // up
+          bar1Y += 1;
+        break;
+
+        case 40: // down
+          bar1Y -= 1;
+        break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});

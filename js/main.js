@@ -3,7 +3,6 @@
 //Misc
 var gameCanvas;
 var draw;
-var isInit = false;
 
 //Game Vars
 var bar1X = 0;
@@ -31,17 +30,13 @@ var barsWin = new Image();
 var ballWins = new Image();
 
 function initCanvas() {
-  if (!isInit) {
+
     gameCanvas = document.getElementById("gameCanvas");
     gameCanvas.width = 600;
     gameCanvas.height = 600;
     gameCanvas.addEventListener("keypress", checkKeypress, false);
     gameCanvas.addEventListener("mousemove", checkMousePos, false);
-    isInit = true;
     alert("Canvas initialized!");
-  } else {
-    drawImg();
-  }
 }
 
 function drawImg() {
@@ -88,4 +83,5 @@ function checkKeypress(e) {
   if (keyCode == 88) {
     alert("You pressed W!");
   }
+  drawImg();
 }

@@ -3,6 +3,7 @@
 //Misc
 var gameCanvas;
 var draw;
+var isInit = false;
 
 //Game Vars
 var bar1X = 0;
@@ -31,24 +32,29 @@ var ballWins = new Image();
 
 function initCanvas() {
 
-    gameCanvas = document.getElementById("gameCanvas");
-    gameCanvas.width = 600;
-    gameCanvas.height = 600;
-    playerBall.src = "img/pongimg/Ball.png";
-    bar.src = "img/pongimg/Bar.png";
-    playButton.src = "img/pongimg/Play.png";
-    controlsButton.src = "img/pongimg/Controls.png";
-    mousePic.src = "img/pongimg/Mouse.png";
-    wasd.src = "img/pongimg/WASD.png";
-    arrowKeys.src = "img/pongimg/ArrowKeys.png"; 
-    highlightBox.src = "img/pongimg/HighlightBox.png";
-    controlsMenu.src = "img/pongimg/ControlsMenu.png";
-    computer.src = "img/pongimg/Computer.png";
-    barsWin.src = "img/pongimg/BarsWin.png";
-    ballWins.src = "img/pongimg/BallWins.png";
-    gameCanvas.addEventListener("keypress", checkKeypress, false);
-    gameCanvas.addEventListener("mousemove", checkMousePos, false);
-    alert("Canvas initialized!");
+    if (!isInit) {
+      gameCanvas = document.getElementById("gameCanvas");
+      gameCanvas.width = 600;
+      gameCanvas.height = 600;
+      playerBall.src = "img/pongimg/Ball.png";
+      bar.src = "img/pongimg/Bar.png";
+      playButton.src = "img/pongimg/Play.png";
+      controlsButton.src = "img/pongimg/Controls.png";
+      mousePic.src = "img/pongimg/Mouse.png";
+      wasd.src = "img/pongimg/WASD.png";
+      arrowKeys.src = "img/pongimg/ArrowKeys.png"; 
+      highlightBox.src = "img/pongimg/HighlightBox.png";
+      controlsMenu.src = "img/pongimg/ControlsMenu.png";
+      computer.src = "img/pongimg/Computer.png";
+      barsWin.src = "img/pongimg/BarsWin.png";
+      ballWins.src = "img/pongimg/BallWins.png";
+      gameCanvas.addEventListener("keypress", checkKeypress, false);
+      gameCanvas.addEventListener("mousemove", checkMousePos, false);
+      alert("Canvas initialized!");
+      isInit = true;
+    } else {
+     drawImg();   
+    }
 }
 
 function drawImg() {

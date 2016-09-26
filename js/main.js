@@ -7,7 +7,7 @@ var isInit = false;
 
 //Game Vars
 var bar1X = 0;
-var bar2X = 225;
+var bar1Y = 225;
 
 var bar2X = 500;
 var bar2Y = 225;
@@ -16,7 +16,6 @@ var ballX = 250;
 var ballY = 250;
 
 //Game graphics
-var testImg = new Image();
 var playerBall = new Image();
 var bar = new Image();
 var playButton = new Image();

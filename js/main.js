@@ -36,6 +36,7 @@ function initCanvas() {
     gameCanvas.width = 600;
     gameCanvas.height = 600;
     gameCanvas.addEventListener("keypress", checkKeypress, false);
+    gameCanvas.addEventListener("mousemove", checkMousePos, false);
     isInit = true;
     alert("Canvas initialized!");
   } else {
@@ -77,6 +78,9 @@ function checkMousePos(e) {
   mouseX = e.layerX;
   mouseY = e.layerY;
  }
+  
+  alert("Mouse is positioned at X=" + mouseX + " and Y=" + mouseY);
+  
  }
 
 function checkKeypress(e) {

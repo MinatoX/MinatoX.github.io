@@ -88,8 +88,18 @@ function checkKeypress(e) {
   var keycode = e.keyCode;
     
     if (keycode == 87) {
-        bar1Y = bar1Y - 1;
+        bar1Y = bar1Y - 3;
+        bar2Y = bar2Y - 3;
         clearCanvas();
+    } else if (keycode == 83) {
+        bar1Y = bar1Y + 3;
+        bar2Y = bar2Y + 3;
+    }
+    
+    if (keycode == 38) {
+        ballY = ballY - 3;
+    } else if (keycode == 40) {
+        ballY = ballY + 3;   
     }
   
   //alert(keycode);  

@@ -87,7 +87,10 @@ function checkMousePos(e) {
 function checkKeypress(e) {
   var keycode = e.keyCode;
     
-    alert(keycode);
-    
+    if (keycode == 87) {
+        bar1Y -= 0.2;   
+    }
+  
+  //alert(keycode);  
   //drawImg();
 }

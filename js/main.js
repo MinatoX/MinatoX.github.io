@@ -85,9 +85,9 @@ function checkMousePos(e) {
  }
 
 function checkKeypress(e) {
-  var keyCode = e.keyCode;
+  var keycode = e.keyCode;
     
-    alert(keyCode);
+    alert(keycode);
     
   //drawImg();
 }

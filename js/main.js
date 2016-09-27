@@ -89,20 +89,24 @@ function checkKeypress(e) {
     
     keycode[e.keyCode] = true;
     
-    if (keycode[87]) {
+    if (keycode[87] && !keycode[38]) {
         bar1Y = bar1Y - 7;
         bar2Y = bar2Y - 7;
         updateCanvas();
-    } else if (keycode[83]) {
+    } else if (keycode[87] && keycode[38]) {
+        bar1Y = bar1Y - 7;
+        bar2Y = bar2Y - 7;
+        ballY = ballY - 7;
+        updateCanvas();
+    }
+    
+    else if (keycode[83]) {
         bar1Y = bar1Y + 7;
         bar2Y = bar2Y + 7;
         updateCanvas();
     }
     
-    if (keycode[38]) {
-        ballY = ballY - 7;
-        updateCanvas();
-    } else if (keycode[40]) {
+    if (keycode[40]) {
         ballY = ballY + 7;  
         updateCanvas();
     }

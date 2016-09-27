@@ -85,7 +85,7 @@ function checkMousePos(e) {
 function checkKeypress(e) {
   var keyCode = e.keyCode;
 
-  if (keyCode == 88) {
+  if (keyCode == 87) {
     alert("You pressed W!");
   }
   //drawImg();

@@ -47,7 +47,7 @@ function initCanvas() {
       computer.src = "img/pongimg/Computer.png";
       barsWin.src = "img/pongimg/BarsWin.png";
       ballWins.src = "img/pongimg/BallWins.png";
-      gameCanvas.addEventListener("keypress", checkKeypress, false);
+      gameCanvas.addEventListener("keydown", checkKeypress, false);
       gameCanvas.addEventListener("mousemove", checkMousePos, false);
       alert("Canvas initialized!");
       isInit = true;

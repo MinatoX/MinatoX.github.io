@@ -87,6 +87,8 @@ function checkMousePos(e) {
 function checkKeypress(e) {
   var keycode = {};//e.keyCode;
     
+    keycode[e.keyCode] = true;
+    
     if (keycode[87]) {
         bar1Y = bar1Y - 7;
         bar2Y = bar2Y - 7;

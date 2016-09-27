@@ -15,6 +15,9 @@ var bar2Y = 225;
 var ballX = 250;
 var ballY = 250;
 
+var mouseX, mouseY;
+
+
 //Game graphics
 var playerBall = new Image();
 var bar = new Image();
@@ -67,7 +70,6 @@ function drawImg() {
 }
 
 function checkMousePos(e) {
- var mouseX, mouseY;
  
  if (e.offsetX) {
   mouseX = e.offsetX;

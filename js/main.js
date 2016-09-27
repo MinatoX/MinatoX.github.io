@@ -88,9 +88,14 @@ function checkKeypress(e) {
   var keycode = e.keyCode;
     
     if (keycode == 87) {
-        bar1Y = bar1Y - 0.2;   
+        bar1Y = bar1Y - 0.2;
+        clearCanvas();
     }
   
   //alert(keycode);  
   //drawImg();
+}
+
+function clearCanvas() {
+    gameCanvas.width = gameCanvas.width;   
 }

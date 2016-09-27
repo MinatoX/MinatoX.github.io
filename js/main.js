@@ -64,8 +64,8 @@ function drawImg() {
   
   //testImg.src = "img/menu_back_02.png";
   draw.drawImage(bar, bar1X, bar1Y);
-  //draw.drawImage(bar, bar2X, bar2Y);
-  //draw.drawImage(ball, ballX, ballY);
+  draw.drawImage(bar, bar2X, bar2Y);
+  draw.drawImage(ball, ballX, ballY);
   
 }
 

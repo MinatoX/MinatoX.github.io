@@ -59,9 +59,8 @@ function initCanvas() {
       gameCanvas.addEventListener("mousemove", checkMousePos, false);
       alert("Canvas initialized!");
       isInit = true;
-    } else {
-     mainLoop();   
     }
+    mainLoop();
 }
 
 function drawImg() {

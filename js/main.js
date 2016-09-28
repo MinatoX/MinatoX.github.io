@@ -148,7 +148,7 @@ function checkKeypress(e) {
 
 function checkKeyup(e) {
     falseKeycode[e.keyCode] = true;
-    keycode[e.keyCode] = false;
+    //keycode[e.keyCode] = false;
     
     if (falseKeycode[87]) {
      barUp = false;

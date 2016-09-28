@@ -60,7 +60,7 @@ function initCanvas() {
       alert("Canvas initialized!");
       isInit = true;
     }
-    mainLoop();
+    
 }
 
 function drawImg() {
@@ -73,11 +73,37 @@ function drawImg() {
   
 }
 
-function mainLoop() {
- while (1 == 1) {
-     
-     //Movement//
-  if (barUp) {
+//SETTING UP THE LOOP/////////////////////////////////
+
+var mainloop = function() {
+        updateGame();
+        updateCanvas();
+    };
+
+    var animFrame = window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            window.oRequestAnimationFrame      ||
+            window.msRequestAnimationFrame     ||
+            null ;
+
+    if ( animFrame !== null ) {
+        var recursiveAnim = function() {
+            mainloop();
+            animFrame( recursiveAnim );
+        };
+
+        // start the mainloop
+        animFrame( recursiveAnim );
+    } else {
+        var ONE_FRAME_TIME = 1000.0 / 60.0 ;
+        setInterval( mainloop, ONE_FRAME_TIME );
+    }
+
+//////////////////////////////////////////////////////////////////
+
+function updateGame() {
+    if (barUp) {
         bar1Y = bar1Y - 7;
         bar2Y = bar2Y - 7;
     } else if (barDown) {
@@ -86,15 +112,10 @@ function mainLoop() {
     }
     
     if (ballUp) {
-        ballY = ballY - 7;
+        ballY = ballY - 7;   
     } else if (ballDown) {
-        ballY = ballY + 7;
-    }   
-    //////////
-     
-     
-     updateCanvas();
- }
+        ballY = ballY + 7;   
+    }
 }
 
 function checkMousePos(e) {
@@ -106,8 +127,6 @@ function checkMousePos(e) {
   mouseX = e.layerX;
   mouseY = e.layerY;
  }
-  
-  drawImg();
   //alert("Mouse is positioned at X=" + mouseX + " and Y=" + mouseY);
   
  }

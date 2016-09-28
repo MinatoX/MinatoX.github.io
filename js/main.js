@@ -17,6 +17,11 @@ var ballY = 250;
 
 var mouseX, mouseY;
 
+var barUp;
+var barDown;
+var ballUp;
+var ballDown;
+
 
 //Game graphics
 var playerBall = new Image();
@@ -55,7 +60,7 @@ function initCanvas() {
       alert("Canvas initialized!");
       isInit = true;
     } else {
-     drawImg();   
+     mainLoop();   
     }
 }
 
@@ -67,6 +72,30 @@ function drawImg() {
   draw.drawImage(bar, bar2X, bar2Y);
   draw.drawImage(playerBall, ballX, ballY);
   
+}
+
+function mainLoop() {
+ while (1 == 1) {
+     
+     //Movement//
+  if (barUp) {
+        bar1Y = bar1Y - 7;
+        bar2Y = bar2Y - 7;
+    } else if (barDown) {
+        bar1Y = bar1Y + 7;
+        bar2Y = bar2Y + 7;
+    }
+    
+    if (ballUp) {
+        ballY = ballY - 7;
+    } else if (ballDown) {
+        ballY = ballY + 7;
+    }   
+    //////////
+     
+     
+     updateCanvas();
+ }
 }
 
 function checkMousePos(e) {
@@ -86,11 +115,6 @@ function checkMousePos(e) {
 
 function checkKeypress(e) {
   var keycode = {};//e.keyCode;
-  var barUp;
-  var barDown;
-  var ballUp;
-  var ballDown;
-    
     
     keycode[e.keyCode] = true;
     
@@ -120,22 +144,6 @@ function checkKeypress(e) {
         ballUp = false;
         ballDown = false;
     }
-    
-    if (barUp) {
-        bar1Y = bar1Y - 7;
-        bar2Y = bar2Y - 7;
-    } else if (barDown) {
-        bar1Y = bar1Y + 7;
-        bar2Y = bar2Y + 7;
-    }
-    
-    if (ballUp) {
-        ballY = ballY - 7;
-    } else if (ballDown) {
-        ballY = ballY + 7;
-    }
-    
-    updateCanvas();
   
   //alert(keycode);  
 }

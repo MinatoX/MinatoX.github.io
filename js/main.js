@@ -152,20 +152,20 @@ function checkKeyup(e) {
     
     if (falseKeycode[87]) {
      barUp = false;
-     //keycode[87] = false;
+     keycode[87] = false;
     }
     if (falseKeycode[83]) {
      barDown = false;
-     //keycode[83] = false;
+     keycode[83] = false;
     }
     
     if (falseKeycode[38]) {
       ballUp = false;
-      //keycode[38] = false;
+      keycode[38] = false;
     }
     if (falseKeycode[40]) {
         ballDown = false;
-        //keycode[40] = false;
+        keycode[40] = false;
     }
     
 }

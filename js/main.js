@@ -6,6 +6,7 @@ var draw;
 var isInit = false;
 var gameInt;
 var keycode = {};//e.keyCode;
+var falseKeycode = {};
 
 //Game Vars
 var bar1X = 0;
@@ -146,7 +147,24 @@ function checkKeypress(e) {
 }
 
 function checkKeyup(e) {
-    keycode[e.keyCode] = false;
+    falseKeycode[e.keyCode] = true;
+    
+    if (falseKeycode[87]) {
+     barUp = false;
+     keycode[87] = false;
+    } else if (falseKeycode[83]) {
+     barDown = false;
+     keycode[83] = false;
+    }
+    
+    if (falseKeycode[38]) {
+      ballUp = false;
+      keycode[38] = false;
+    } else if (falseKeycode[40]) {
+        ballDown = false;
+        keycode[40] = false;
+    }
+    
 }
 
 function updateCanvas() {

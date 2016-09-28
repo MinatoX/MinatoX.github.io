@@ -69,7 +69,7 @@ function initCanvas() {
             updateGame();
             updateCanvas();
         }
-        gameInt = setInterval(mainloop, 1000 / 60);
+        gameInt = setInterval(mainloop, 1000 / 120);
     
 }
 

@@ -124,10 +124,10 @@ function checkKeypress(e) {
         barUp = false;
         barDown = true;
     } 
-    if (!keycode[87] && !keycode[83])  {
+   /* if (!keycode[87] && !keycode[83])  {
          barUp = false;
          barDown = false;
-    }
+    } */
     
     if (keycode[38]) {
         ballUp = true;
@@ -137,10 +137,10 @@ function checkKeypress(e) {
         ballUp = false;
         ballDown = true;
     } 
-    if (!keycode[38] && !keycode[40]){
+   /* if (!keycode[38] && !keycode[40]){
         ballUp = false;
         ballDown = false;
-    }
+    } */
   
   //alert(keycode);  
 }

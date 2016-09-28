@@ -60,6 +60,12 @@ function initCanvas() {
       alert("Canvas initialized!");
       isInit = true;
     }
+      //Start the main loop//
+        var mainloop = function() {
+            updateGame();
+            updateCanvas();
+        }
+        Game._intervalId = setInterval(mainloop, 1000 / 60);
     
 }
 
@@ -72,35 +78,6 @@ function drawImg() {
   draw.drawImage(playerBall, ballX, ballY);
   
 }
-
-//SETTING UP THE LOOP/////////////////////////////////
-
-var mainloop = function() {
-        updateGame();
-        updateCanvas();
-    };
-
-    var animFrame = window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame    ||
-            window.oRequestAnimationFrame      ||
-            window.msRequestAnimationFrame     ||
-            null ;
-
-    if ( animFrame !== null ) {
-        var recursiveAnim = function() {
-            mainloop();
-            animFrame( recursiveAnim );
-        };
-
-        // start the mainloop
-        animFrame( recursiveAnim );
-    } else {
-        var ONE_FRAME_TIME = 1000.0 / 60.0 ;
-        setInterval( mainloop, ONE_FRAME_TIME );
-    }
-
-//////////////////////////////////////////////////////////////////
 
 function updateGame() {
     if (barUp) {

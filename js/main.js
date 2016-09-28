@@ -124,20 +124,18 @@ function checkKeypress(e) {
     if (barUp) {
         bar1Y = bar1Y - 7;
         bar2Y = bar2Y - 7;
-        updateCanvas();
     } else if (barDown) {
         bar1Y = bar1Y + 7;
         bar2Y = bar2Y + 7;
-        updateCanvas();
     }
     
     if (ballUp) {
         ballY = ballY - 7;
-        updateCanvas();
     } else if (ballDown) {
         ballY = ballY + 7;
-        updateCanvas();
     }
+    
+    updateCanvas();
   
   //alert(keycode);  
 }

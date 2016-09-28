@@ -94,40 +94,49 @@ function checkKeypress(e) {
     
     keycode[e.keyCode] = true;
     
-    if (keycode[87] || barUp) {
-        bar1Y = bar1Y - 7;
-        bar2Y = bar2Y - 7;
+    
+    if (keycode[87]) {
         barUp = true;
         barDown = false;
-        updateCanvas();
     } 
-    if (keycode[83] || barDown) {
-        bar1Y = bar1Y + 7;
-        bar2Y = bar2Y + 7;
+    if (keycode[83]) {
         barUp = false;
         barDown = true;
-        updateCanvas();
     } 
     if (!keycode[87] && !keycode[83])  {
          barUp = false;
          barDown = false;
     }
     
-    if (keycode[38] || ballUp) {
-        ballY = ballY - 7;
+    if (keycode[38]) {
         ballUp = true;
         ballDown = false;
-        updateCanvas();
     } 
-    if (keycode[40] || ballDown) {
-        ballY = ballY + 7;
+    if (keycode[40]) {
         ballUp = false;
         ballDown = true;
-        updateCanvas();
     } 
     if (!keycode[38] && !keycode[40]){
         ballUp = false;
         ballDown = false;
+    }
+    
+    if (barUp) {
+        bar1Y = bar1Y - 7;
+        bar2Y = bar2Y - 7;
+        updateCanvas();
+    } else if (barDown) {
+        bar1Y = bar1Y + 7;
+        bar2Y = bar2Y + 7;
+        updateCanvas();
+    }
+    
+    if (ballUp) {
+        ballY = ballY - 7;
+        updateCanvas();
+    } else if (ballDown) {
+        ballY = ballY + 7;
+        updateCanvas();
     }
   
   //alert(keycode);  

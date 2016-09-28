@@ -5,6 +5,7 @@ var gameCanvas;
 var draw;
 var isInit = false;
 var gameInt;
+var keycode = {};//e.keyCode;
 
 //Game Vars
 var bar1X = 0;
@@ -57,6 +58,7 @@ function initCanvas() {
       barsWin.src = "img/pongimg/BarsWin.png";
       ballWins.src = "img/pongimg/BallWins.png";
       gameCanvas.addEventListener("keydown", checkKeypress, true);
+      gameCanvas.addEventListener("keyup", checkKeyup, true);
       gameCanvas.addEventListener("mousemove", checkMousePos, false);
       alert("Canvas initialized!");
       isInit = true;
@@ -110,7 +112,6 @@ function checkMousePos(e) {
  }
 
 function checkKeypress(e) {
-  var keycode = {};//e.keyCode;
     
     keycode[e.keyCode] = true;
     
@@ -142,6 +143,10 @@ function checkKeypress(e) {
     }
   
   //alert(keycode);  
+}
+
+function checkKeyup(e) {
+    keycode[e.keyCode] = false;
 }
 
 function updateCanvas() {

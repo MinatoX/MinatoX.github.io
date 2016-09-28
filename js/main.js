@@ -4,6 +4,7 @@
 var gameCanvas;
 var draw;
 var isInit = false;
+var gameInt;
 
 //Game Vars
 var bar1X = 0;
@@ -65,7 +66,7 @@ function initCanvas() {
             updateGame();
             updateCanvas();
         }
-        Game._intervalId = setInterval(mainloop, 1000 / 60);
+        gameInt = setInterval(mainloop, 1000 / 60);
     
 }
 

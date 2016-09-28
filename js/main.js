@@ -86,29 +86,48 @@ function checkMousePos(e) {
 
 function checkKeypress(e) {
   var keycode = {};//e.keyCode;
+  var barUp;
+  var barDown;
+  var ballUp;
+  var ballDown;
+    
     
     keycode[e.keyCode] = true;
     
-    if (keycode[87] && !keycode[38]) {
+    if (keycode[87] || barUp) {
         bar1Y = bar1Y - 7;
         bar2Y = bar2Y - 7;
+        barUp = true;
+        barDown = false;
         updateCanvas();
-    } else if (keycode[87] && keycode[38]) {
-        bar1Y = bar1Y - 7;
-        bar2Y = bar2Y - 7;
-        ballY = ballY - 7;
-        updateCanvas();
-    }
-    
-    else if (keycode[83]) {
+    } 
+    if (keycode[83] || barDown) {
         bar1Y = bar1Y + 7;
         bar2Y = bar2Y + 7;
+        barUp = false;
+        barDown = true;
         updateCanvas();
+    } 
+    if (!keycode[87] && !keycode[83])  {
+         barUp = false;
+         barDown = false;
     }
     
-    if (keycode[40]) {
-        ballY = ballY + 7;  
+    if (keycode[38] || ballUp) {
+        ballY = ballY - 7;
+        ballUp = true;
+        ballDown = false;
         updateCanvas();
+    } 
+    if (keycode[40] || ballDown) {
+        ballY = ballY + 7;
+        ballUp = false;
+        ballDown = true;
+        updateCanvas();
+    } 
+    if (!keycode[38] && !keycode[40]){
+        ballUp = false;
+        ballDown = false;
     }
   
   //alert(keycode);  

@@ -152,7 +152,8 @@ function checkKeyup(e) {
     if (falseKeycode[87]) {
      barUp = false;
      keycode[87] = false;
-    } else if (falseKeycode[83]) {
+    }
+    if (falseKeycode[83]) {
      barDown = false;
      keycode[83] = false;
     }
@@ -160,7 +161,8 @@ function checkKeyup(e) {
     if (falseKeycode[38]) {
       ballUp = false;
       keycode[38] = false;
-    } else if (falseKeycode[40]) {
+    }
+    if (falseKeycode[40]) {
         ballDown = false;
         keycode[40] = false;
     }

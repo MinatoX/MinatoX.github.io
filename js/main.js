@@ -102,11 +102,11 @@ function updateGame() {
         ballY = ballY + 7;   
     }
     
-    /*if (barDir) {
+    if (barDir) {
      ballX = ballX + 7;   
     } else {
      ballX = ballX - 7;
-    }*/
+    }
     
     /////////////////////////
     

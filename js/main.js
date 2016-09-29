@@ -136,6 +136,12 @@ function updateGame() {
         //Increment bar point by .5
     }
     
+    if (ballX >= 900 || ballX <= -100) {
+        ballX = 400;
+    }
+    
+    ////////////////////////
+    
 }
 
 function checkMousePos(e) {

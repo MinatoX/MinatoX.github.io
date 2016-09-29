@@ -15,7 +15,7 @@ var bar1Y = 225;
 var bar2X = 750;
 var bar2Y = 225;
 
-var ballX = 250;
+var ballX = 400;
 var ballY = 250;
 
 var mouseX, mouseY;
@@ -24,6 +24,7 @@ var barUp;
 var barDown;
 var ballUp;
 var ballDown;
+var barDir = false;
 
 
 //Game graphics
@@ -100,6 +101,13 @@ function updateGame() {
     if (ballDown) {
         ballY = ballY + 7;   
     }
+    
+    /*if (barDir) {
+     ballX = ballX + 7;   
+    } else {
+     ballX = ballX - 7;
+    }*/
+    
     /////////////////////////
     
     //Border Creation///////

@@ -87,14 +87,16 @@ function updateGame() {
     if (barUp) {
         bar1Y = bar1Y - 7;
         bar2Y = bar2Y - 7;
-    } else if (barDown) {
+    } 
+    if (barDown) {
         bar1Y = bar1Y + 7;
         bar2Y = bar2Y + 7;
     }
     
     if (ballUp) {
         ballY = ballY - 7;   
-    } else if (ballDown) {
+    } 
+    if (ballDown) {
         ballY = ballY + 7;   
     }
 }
@@ -138,6 +140,20 @@ function checkKeypress(e) {
        // ballUp = false;
         ballDown = true;
     } 
+    
+    if (!keycode[87] && keycode[38] || !keycode[87] && keycode[40]) {
+        barUp = false;
+    } else if (!keycode[83] && keycode[38] || !keycode[83] && keycode[40]) {
+        barDown = false;   
+    }
+    
+    if (!keycode[87] && !keycode[83] && !keycode[38] && !keycode[40]) {
+        barUp = false;
+        barDown = false;
+        ballUp = false;
+        ballDown = false;
+    }
+    
    /* if (!keycode[38] && !keycode[40]){
         ballUp = false;
         ballDown = false;

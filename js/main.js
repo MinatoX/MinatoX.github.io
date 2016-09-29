@@ -131,13 +131,14 @@ function updateGame() {
     if (barDir && ballX < bar1X + 50 && ballY >= bar1Y && ballY <= bar1Y + 200) {
         barDir = false;
         //Increment bar point by .5
-    } else if (!barDir && ballX > bar2X && ballY >= bar1Y && ballY <= bar2Y + 200) {
+    } else if (!barDir && ballX > bar2X - 50 && ballY >= bar1Y && ballY <= bar2Y + 200) {
         barDir = true;
         //Increment bar point by .5
     }
     
     if (ballX >= 900 || ballX <= -100) {
-        ballX = 400;
+        ballX = 375;
+        ballY = 250;
         //Increment point for ball by 1
     }
     

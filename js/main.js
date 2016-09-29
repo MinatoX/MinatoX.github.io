@@ -12,7 +12,7 @@ var falseKeycode = {};
 var bar1X = 0;
 var bar1Y = 225;
 
-var bar2X = 500;
+var bar2X = 750;
 var bar2Y = 225;
 
 var ballX = 250;
@@ -44,9 +44,9 @@ function initCanvas() {
 
     if (!isInit) {
       gameCanvas = document.getElementById("gameCanvas");
-      gameCanvas.width = 600;
+      gameCanvas.width = 800; //Set canvas dimensions
       gameCanvas.height = 600;
-      playerBall.src = "img/pongimg/Ball.png";
+      playerBall.src = "img/pongimg/Ball.png"; //LOAD IMAGES
       bar.src = "img/pongimg/Bar.png";
       playButton.src = "img/pongimg/Play.png";
       controlsButton.src = "img/pongimg/Controls.png";
@@ -58,9 +58,9 @@ function initCanvas() {
       computer.src = "img/pongimg/Computer.png";
       barsWin.src = "img/pongimg/BarsWin.png";
       ballWins.src = "img/pongimg/BallWins.png";
-      gameCanvas.addEventListener("keydown", checkKeypress, true);
-      gameCanvas.addEventListener("keyup", checkKeyup, true);
-      gameCanvas.addEventListener("mousemove", checkMousePos, false);
+      gameCanvas.addEventListener("keydown", checkKeypress, true); //Listen for keypresses
+      gameCanvas.addEventListener("keyup", checkKeyup, true); //Listen for keyreleases
+      gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos
       alert("Canvas initialized!");
       isInit = true;
     }
@@ -73,7 +73,7 @@ function initCanvas() {
     
 }
 
-function drawImg() {
+function drawImg() { //Draw images onto the screen
   draw = gameCanvas.getContext("2d");
   
   //testImg.src = "img/menu_back_02.png";
@@ -84,6 +84,7 @@ function drawImg() {
 }
 
 function updateGame() {
+    //Movement////////////////////
     if (barUp) {
         bar1Y = bar1Y - 7;
         bar2Y = bar2Y - 7;
@@ -99,6 +100,24 @@ function updateGame() {
     if (ballDown) {
         ballY = ballY + 7;   
     }
+    /////////////////////////
+    
+    //Border Creation///////
+    if (bar1Y > 775) {
+        bar1Y = 775;
+        bar2Y = 775;
+    } else if (bar1Y < 25) {
+        bar1Y = 25;
+        bar2Y = 25;
+    }
+    if (ballY > 775) {
+        ballY = 775;   
+    } else if (ballY < 25) {
+        ballY = 25;   
+    }
+    
+    ////////////////////////
+    
 }
 
 function checkMousePos(e) {
@@ -114,7 +133,7 @@ function checkMousePos(e) {
   
  }
 
-function checkKeypress(e) {
+function checkKeypress(e) { //Check keypresses
     
     keycode[e.keyCode] = true;
     
@@ -160,7 +179,7 @@ function checkKeypress(e) {
   //alert(keycode);  
 }
 
-function checkKeyup(e) {
+function checkKeyup(e) { //Check key releases
     falseKeycode[e.keyCode] = true;
     //keycode[e.keyCode] = false;
     

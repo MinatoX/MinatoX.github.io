@@ -121,11 +121,13 @@ function checkKeypress(e) {
     
     if (keycode[87]) {
         barUp = true;
+        falseKeycode[87] = false;
         //barDown = false;
     } 
     if (keycode[83]) {
         //barUp = false;
         barDown = true;
+        falseKeycode[83] = false;
     } 
    /* if (!keycode[87] && !keycode[83])  {
          barUp = false;
@@ -134,10 +136,12 @@ function checkKeypress(e) {
     
     if (keycode[38]) {
         ballUp = true;
+        falseKeycode[38] = false;
         //ballDown = false;
     } 
     if (keycode[40]) {
        // ballUp = false;
+        falseKeycode[40] = false;
         ballDown = true;
     } 
     

@@ -128,10 +128,10 @@ function updateGame() {
     
     //Change Ball Direction/
     
-    if (barDir && ballX > bar1X + 50 && ballY <= bar1Y && ballY >= bar1Y + 75) {
+    if (barDir && ballX > bar1X + 50 && ballY <= bar1Y && ballY >= bar1Y - 75) {
         barDir = false;
         //Increment bar point by .5
-    } else if (!barDir && ballX < bar2X - 50 && ballY <= bar1Y && ballY >= bar2Y + 75) {
+    } else if (!barDir && ballX < bar2X - 50 && ballY <= bar1Y && ballY >= bar2Y - 75) {
         barDir = true;
         //Increment bar point by .5
     }

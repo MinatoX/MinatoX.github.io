@@ -15,7 +15,7 @@ var bar1Y = 225;
 var bar2X = 750;
 var bar2Y = 225;
 
-var ballX = 400;
+var ballX = 375;
 var ballY = 250;
 
 var mouseX, mouseY;

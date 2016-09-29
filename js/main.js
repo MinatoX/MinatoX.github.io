@@ -145,12 +145,6 @@ function checkKeypress(e) {
         ballDown = true;
     } 
     
-    if (!keycode[87] && keycode[38] || !keycode[87] && keycode[40]) {
-        barUp = false;
-    } else if (!keycode[83] && keycode[38] || !keycode[83] && keycode[40]) {
-        barDown = false;   
-    }
-    
     if (!keycode[87] && !keycode[83] && !keycode[38] && !keycode[40]) {
         barUp = false;
         barDown = false;
@@ -171,18 +165,22 @@ function checkKeyup(e) {
     //keycode[e.keyCode] = false;
     
     if (falseKeycode[87]) {
-        barUp = false;   
+        barUp = false;
+        keycode[87] = false;
     }
     if (falseKeycode[83]) {
-        barDown = false;   
+        barDown = false; 
+        keycode[83] = false;
     }
     
     if (falseKeycode[38]) {
-        ballUp = false;   
+        ballUp = false;
+        keycode[38] = false;
     }
     
     if (falseKeycode[40]) {
-        ballDown = false;   
+        ballDown = false;
+        keycode[40] = false;
     }
    
     /*if (falseKeycode[87]) {

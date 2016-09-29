@@ -103,9 +103,9 @@ function updateGame() {
     }
     
     if (barDir) {
-     ballX = ballX + 7;   
+     ballX = ballX - 7;   
     } else {
-     ballX = ballX - 7;
+     ballX = ballX + 7;
     }
     
     /////////////////////////

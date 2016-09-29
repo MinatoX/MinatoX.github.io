@@ -119,10 +119,10 @@ function checkKeypress(e) {
     
     if (keycode[87]) {
         barUp = true;
-        barDown = false;
+        //barDown = false;
     } 
     if (keycode[83]) {
-        barUp = false;
+        //barUp = false;
         barDown = true;
     } 
    /* if (!keycode[87] && !keycode[83])  {
@@ -132,10 +132,10 @@ function checkKeypress(e) {
     
     if (keycode[38]) {
         ballUp = true;
-        ballDown = false;
+        //ballDown = false;
     } 
     if (keycode[40]) {
-        ballUp = false;
+       // ballUp = false;
         ballDown = true;
     } 
    /* if (!keycode[38] && !keycode[40]){
@@ -151,6 +151,21 @@ function checkKeyup(e) {
     //keycode[e.keyCode] = false;
     
     if (falseKeycode[87]) {
+        barUp = false;   
+    }
+    if (falseKeycode[83]) {
+        barDown = false;   
+    }
+    
+    if (falseKeycode[38]) {
+        ballUp = false;   
+    }
+    
+    if (falseKeycode[40]) {
+        ballDown = false;   
+    }
+   
+    /*if (falseKeycode[87]) {
      barUp = false;
      keycode[87] = false;
     }
@@ -166,7 +181,7 @@ function checkKeyup(e) {
     if (falseKeycode[40]) {
         ballDown = false;
         keycode[40] = false;
-    }
+    } */
     
 }
 

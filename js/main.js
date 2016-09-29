@@ -103,15 +103,15 @@ function updateGame() {
     /////////////////////////
     
     //Border Creation///////
-    if (bar1Y > 775) {
-        bar1Y = 775;
-        bar2Y = 775;
-    } else if (bar1Y < 25) {
+    if (bar1Y > 450) {
+        bar1Y = 450;
+        bar2Y = 450;
+    } else if (bar1Y < 10) {
         bar1Y = 25;
         bar2Y = 25;
     }
-    if (ballY > 775) {
-        ballY = 775;   
+    if (ballY > 475) {
+        ballY = 475;   
     } else if (ballY < 25) {
         ballY = 25;   
     }

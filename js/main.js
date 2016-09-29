@@ -138,6 +138,7 @@ function updateGame() {
     
     if (ballX >= 900 || ballX <= -100) {
         ballX = 400;
+        //Increment point for ball by 1
     }
     
     ////////////////////////

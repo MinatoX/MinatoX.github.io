@@ -84,7 +84,7 @@ function drawImg() { //Draw images onto the screen
   draw.drawImage(bar, bar1X, bar1Y);
   draw.drawImage(bar, bar2X, bar2Y);
   draw.drawImage(playerBall, ballX, ballY);
-  draw.fontcolor("white");
+  draw.fillStyle = "#ffffff";
   draw.fillText("Bar: " + barScore, 10, 50);
   draw.fillText("Ball: " + ballScore, 500, 50);
   

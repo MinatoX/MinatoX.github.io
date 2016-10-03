@@ -26,6 +26,9 @@ var ballUp;
 var ballDown;
 var barDir = false;
 
+var barScore = 0;
+var ballScore = 0;
+
 
 //Game graphics
 var playerBall = new Image();
@@ -81,6 +84,8 @@ function drawImg() { //Draw images onto the screen
   draw.drawImage(bar, bar1X, bar1Y);
   draw.drawImage(bar, bar2X, bar2Y);
   draw.drawImage(playerBall, ballX, ballY);
+  draw.fillText("Bar: " + barScore, 10, 50);
+  draw.fillText("Ball: " + ballScore, 500, 50);
   
 }
 
@@ -131,11 +136,13 @@ function updateGame() {
     if (barDir && ballX < bar1X + 50 && ballY >= bar1Y && ballY <= bar1Y + 225) {
         if (ballX > 0) {
             barDir = false;
+            barScore = barScore + 0.5;
         }
         //Increment bar point by .5
     } else if (!barDir && ballX + 50 > bar2X - 50 && ballY >= bar1Y && ballY <= bar2Y + 225) {
         if (ballX < 775) {
             barDir = true;
+            barScore = barScore + 0.5
         }
         //Increment bar point by .5
     }
@@ -143,6 +150,7 @@ function updateGame() {
     if (ballX >= 900 || ballX <= -100) {
         ballX = 375;
         ballY = 250;
+        ballScore = ballScore + 1;
         //Increment point for ball by 1
     }
     

@@ -103,10 +103,10 @@ function updateGame() {
     }
     
     if (ballUp) {
-        ballY = ballY - 7;   
+        ballY = ballY - 10;   
     } 
     if (ballDown) {
-        ballY = ballY + 7;   
+        ballY = ballY + 10;   
     }
     
     if (barDir) {

@@ -66,14 +66,14 @@ function initCanvas() {
       gameCanvas.addEventListener("keyup", checkKeyup, true); //Listen for keyreleases
       gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos
       alert("Canvas initialized!");
-      isInit = true;
-    }
-      //Start the main loop//
+       //Start the main loop//
         var mainloop = function() {
             updateGame();
             updateCanvas();
         }
         gameInt = setInterval(mainloop, 1000 / 60);
+      isInit = true;
+    }
     
 }
 

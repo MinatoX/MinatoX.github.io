@@ -174,7 +174,7 @@ function checkMousePos(e) {
  }
 
 function checkKeypress(e) { //Check keypresses
-    
+    e.preventDefault();
     keycode[e.keyCode] = true;
     
     

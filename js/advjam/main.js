@@ -58,7 +58,7 @@ function initCanvas() {
       mourseCursor.src = "img/advjam/MouseCursor.png";
       
       gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos
-      gameCanvas.addEventListener("click", checkMouseClick, false); //Check mouse clicks
+      //gameCanvas.addEventListener("click", checkMouseClick, false); //Check mouse clicks
     
       alert("Canvas Initialized!");
       isInit = true;

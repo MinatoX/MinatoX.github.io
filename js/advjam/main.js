@@ -54,7 +54,7 @@ function initCanvas() {
       speech1.src = "img/advjam/SpeechBubble2.png";
       mapMarker.src = "img/advjam/mapMarker.png";
       mapOutline.src = "img/advjam/mapOutline.png";
-      party.src = "img/advjam/party.png";
+      party.src = "img/advjam/Party.png";
       mourseCursor.src = "img/advjam/MouseCursor.png";
       
       gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos

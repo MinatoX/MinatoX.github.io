@@ -96,6 +96,7 @@ function drawImg() {
   draw.fillStyle = "#ffffff";
   draw.fillText("X: " + mouseX, 10, 50, 200);
   draw.fillText("Y: " + mouseY, 10, 75, 200);
+
 }
 
 function updateCanvas() {

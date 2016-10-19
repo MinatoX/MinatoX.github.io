@@ -47,8 +47,8 @@ function initCanvas() {
       colin.src = "img/advjam/ColinRedesign.png";
       alex.src = "img/advjam/Alex.png";
       akira.src = "img/advjam/Akira.png";
-      //foleyBase.src = "img/advjam/Foley Main Base.png";
-      //inventory.src = "img/advjam/Item Inventory.png";
+      foleyBase.src = "img/advjam/Foley Main Base.png";
+      inventory.src = "img/advjam/Item Inventory.png";
       map.src = "img/advjam/Map.png";
       speech.src = "img/advjam/SpeechBubble1.png";
       speech1.src = "img/advjam/SpeechBubble2.png";
@@ -58,7 +58,7 @@ function initCanvas() {
       mourseCursor.src = "img/advjam/MouseCursor.png";
       
       gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos
-      gameCanvas.addEventListener("click", checkMouseClick, false); //Check mouse clicks
+      //gameCanvas.addEventListener("click", checkMouseClick, false); //Check mouse clicks
     
       alert("Canvas Initialized!");
     var mainLoop = function() {

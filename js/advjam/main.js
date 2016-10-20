@@ -52,9 +52,9 @@ function initCanvas() {
       map.src = "img/advjam/Map.png";
       speech.src = "img/advjam/SpeechBubble1.png";
       speech1.src = "img/advjam/SpeechBubble2.png";
-      /*mapMarker.src = "img/advjam/mapMarker.png";
+      mapMarker.src = "img/advjam/mapMarker.png";
       mapOutline.src = "img/advjam/mapOutline.png";
-      party.src = "img/advjam/Party.png";
+      /*party.src = "img/advjam/Party.png";
       mourseCursor.src = "img/advjam/MouseCursor.png";*/
       
       gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos

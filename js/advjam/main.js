@@ -96,6 +96,9 @@ function drawImg() {
   draw.fillStyle = "#ffffff";
   draw.fillText("X: " + mouseX, 10, 50, 200);
   draw.fillText("Y: " + mouseY, 10, 75, 200);
+  
+  //Test drawing for scene 1; refer to scene events in separate script files in the future
+  draw.drawImage(foleyBase, 0, 0);
 
 }
 

@@ -47,9 +47,9 @@ function initCanvas() {
       colin.src = "img/advjam/ColinRedesign.png";
       alex.src = "img/advjam/Alex.png";
       akira.src = "img/advjam/Akira.png";
-      /*foleyBase.src = "img/advjam/Foley Main Base.png";
+      foleyBase.src = "img/advjam/Foley Main Base.png";
       inventory.src = "img/advjam/Item Inventory.png";
-      map.src = "img/advjam/Map.png";
+      /*map.src = "img/advjam/Map.png";
       speech.src = "img/advjam/SpeechBubble1.png";
       speech1.src = "img/advjam/SpeechBubble2.png";
       mapMarker.src = "img/advjam/mapMarker.png";

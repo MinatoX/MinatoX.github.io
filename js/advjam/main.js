@@ -42,12 +42,12 @@ function initCanvas() {
       gameCanvas.width = 800; //Set canvas dimensions
       gameCanvas.height = 600;
       //Defining images
-      /*robert.src = "img/advjam/Robert.png";
+      robert.src = "img/advjam/Robert.png";
       ryan.src = "img/advjam/Ryan.png"
       colin.src = "img/advjam/ColinRedesign.png";
       alex.src = "img/advjam/Alex.png";
       akira.src = "img/advjam/Akira.png";
-      foleyBase.src = "img/advjam/Foley Main Base.png";
+      /*foleyBase.src = "img/advjam/Foley Main Base.png";
       inventory.src = "img/advjam/Item Inventory.png";
       map.src = "img/advjam/Map.png";
       speech.src = "img/advjam/SpeechBubble1.png";

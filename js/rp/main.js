@@ -3,6 +3,9 @@ var isInit = false;
 
 var mouseX;
 var mouseY;
+var keycode = {};
+
+var printText = ""
 
 
 function initCanvas() {
@@ -32,7 +35,10 @@ function createChar() {
 }
 
 function drawImg() {
-  
+  draw.font = "20px Georgia";
+  draw.fillStyle = "#ffffff";
+  draw.fillText("Roleplay Engine test. Current version is: 0.0.1");
+  draw.fillText("Press ENTER to create a new character.");
 }
 
 function updateGame() {
@@ -50,13 +56,15 @@ function checkMousePos(e) {
 }
 
 function checkKeypress(e) {
-  
+  e.preventDefault();
+  keycode[e.keyCode] = true;
 }
 
 function checkKeyup(e) {
-  
+  keycode[e.keyCode] = false;
 }
 
 function updateCanvas() {
   drawImg();
+  gameCanvas.width = gameCanvas.width;
 }

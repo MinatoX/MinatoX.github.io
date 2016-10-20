@@ -42,7 +42,7 @@ function initCanvas() {
       gameCanvas.width = 800; //Set canvas dimensions
       gameCanvas.height = 600;
       //Defining images
-      robert.src = "img/advjam/Robert.png";
+      /*robert.src = "img/advjam/Robert.png";
       ryan.src = "img/advjam/Ryan.png"
       colin.src = "img/advjam/ColinRedesign.png";
       alex.src = "img/advjam/Alex.png";
@@ -55,10 +55,10 @@ function initCanvas() {
       mapMarker.src = "img/advjam/mapMarker.png";
       mapOutline.src = "img/advjam/mapOutline.png";
       party.src = "img/advjam/Party.png";
-      mourseCursor.src = "img/advjam/MouseCursor.png";
+      mourseCursor.src = "img/advjam/MouseCursor.png";*/
       
       gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos
-      //gameCanvas.addEventListener("click", checkMouseClick, false); //Check mouse clicks
+      gameCanvas.addEventListener("click", checkMouseClick, false); //Check mouse clicks
     
       alert("Canvas Initialized!");
     var mainLoop = function() {

@@ -98,7 +98,7 @@ function drawImg() {
   draw.fillText("Y: " + mouseY, 10, 75, 200);
   
   //Test drawing for scene 1; refer to scene events in separate script files in the future
-  draw.drawImage(foleyBase, 0, 0);
+  draw.drawImage(foleyBase, 0, 0, 0.5, 0.5);
 
 }
 

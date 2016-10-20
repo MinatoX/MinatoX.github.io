@@ -101,8 +101,8 @@ function drawImg() {
   draw.drawImage(foleyBase, 0, 0, 800, 600);
   
   //Draw HUD; should be on top of everything
-  draw.drawImage(map, 50, 50, 100, 75)
-  draw.drawImage(party, 600, 50, 100, 100)
+  draw.drawImage(map, 50, 50, 200, 150)
+  draw.drawImage(party, 700, 50, 200, 200)
 
 }
 

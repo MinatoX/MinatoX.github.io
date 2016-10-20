@@ -99,6 +99,10 @@ function drawImg() {
   
   //Test drawing for scene 1; refer to scene events in separate script files in the future
   draw.drawImage(foleyBase, 0, 0, 800, 600);
+  
+  //Draw HUD; should be on top of everything
+  draw.drawImage(map, 50, 50, 100, 75)
+  draw.drawImage(party, 600, 50, 100, 100)
 
 }
 

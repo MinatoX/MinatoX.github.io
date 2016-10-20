@@ -55,7 +55,7 @@ function initCanvas() {
       mapMarker.src = "img/advjam/mapMarker.png";
       mapOutline.src = "img/advjam/mapOutline.png";
       party.src = "img/advjam/Party.png";
-      mourseCursor.src = "img/advjam/MouseCursor.png";
+      mouseCursor.src = "img/advjam/MouseCursor.png";
       
       gameCanvas.addEventListener("mousemove", checkMousePos, false); //Check mousepos
       gameCanvas.addEventListener("click", checkMouseClick, false); //Check mouse clicks

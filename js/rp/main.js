@@ -42,7 +42,21 @@ function drawImg() {
 }
 
 function updateGame() {
-  
+ 
+    var testFile;
+if (window.XMLHttpRequest) {
+    testFile = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+    testFile = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+testFile.onreadystatechange = function(){alert(xhr.responseText);};
+testFile.open("GET","test.txt");
+testFile.send();
+
+alert(testFile);
+
+    
 }
 
 function checkMousePos(e) {

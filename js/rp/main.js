@@ -54,8 +54,6 @@ testFile.onreadystatechange = function(){alert(xhr.responseText);};
 testFile.open("GET","test.txt");
 testFile.send();
 
-alert(testFile);
-
     
 }
 

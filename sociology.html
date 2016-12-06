@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Gemeinschaft & Gesellschaft</title>
+        <style>
+            body {
+                background: gray;
+            }
+            /* Style the list */
+            ul.tab {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1px solid #ccc;
+                background-color: #f1f1f1;
+            }
+
+            /* Float the list items side by side */
+            ul.tab li {float: left;}
+
+            /* Style the links inside the list items */
+            ul.tab li a {
+                display: inline-block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: 0.3s;
+                font-size: 17px;
+            }
+
+            /* Change background color of links on hover */
+            ul.tab li a:hover {background-color: #ddd;}
+            /* Create an active/current tablink class */
+            ul.tab li a:focus, .active {background-color: #ccc;}
+
+            /* Style the tab content */
+            .tabcontent {
+                display: none;
+                padding: 6px 12px;
+                border: 1px solid #ccc;
+                border-top: none;
+            }
+
+        </style>
+        <script>
+            function openDef(evt, def) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the link that opened the tab
+                document.getElementById(def).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+    </head>
+    <body>
+        <h1>Gemeinschaft VS Gesellschaft Culture in America</h1>
+        
+        <h1 style='text-align: center; color: navy'>What's So Different?</h1>
+        <p style='text-align: center; font-size: 20'>Gemeinschaft focuses on the idea of a community-based society where everyone tends to work well together.</p>
+        <p style='text-align: center; font-size: 20'>Gesellschaft focuses on the idea of an "Every man for himself" sort of society where only the "strong" can enjoy the pleasures of a comfortable lifestlyle.</p>
+        
+        <ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openDef(event, 'Test')" id='defaultOpen'>Gemeinschaft</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openDef(event, 'Test2')">Gesellschaft</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openDef(event, 'Test3')">Transitioning</a></li>
+</ul>
+
+<div id="Test" class="tabcontent">
+  <h1 style='color:brown'>Definition</h1>
+  <li style='font-size: 30px; font-family:georgia'>Gemeinschaft<p style='font-size: 20'>The relationship amongst individuals in personal or family ties.</p></li>
+  <p>The Industrial Revolution completely changed family and workers' roles in our society, and these changes began to form America into more of a Gemeinschaft society. Children were no longer expected to work in the factories and instead were allowed to actually enjoy a childhood at home. Laws were put in place to prevent abusive work conditions and unfair pay so there were no "every man for himself" situations occurring. Lots of Church groups were forming and coworkers began to be more friendly with each other as people started to see the value of working together towards a common goal.</p>
+  <img src='http://www.managingamericans.com/pub/images/20130521220944_Managingformercoworkers.jpg'>
+  
+</div>
+
+<div id="Test2" class="tabcontent">
+  <h1 style='color:brown'>Definition</h1>
+  <li style='font-size: 30px; font-family:georgia'>Gesellschaft</li><p style='font-size: 20'>A relationship with impersonal ties, as duty to a society or organization.</p>
+  
+  <p>America before the industrial revolution where the existence of labor unions popped up would our prime example of a Gesellschaft society. Company bosses would have the leisure of earning money while the "weak commoners" worked in the factories that give the bosses the money they have. However, the workers in these factories were largely under-compensated and working conditions were appalling. Workers were commonly killed, injured and sickened by their workplace. Government mandated health and safety standards didn't exist. Workplaces were filthy and polluted. Unsafe conditions were the norm, as the bosses could care less about how their workers felt. Families also had children about every two years until the women reached the age of forty. Part of this was due to the mortality rate in factories. However, a big reason was also for personal economic gain, as parents expected their children to work in the factories for a little bit of extra income.</p>
+  
+  <img src='http://www.primaryhomeworkhelp.co.uk/victorians/children/mill.jpg'>
+  <p>Children working with dangerous machinery in a factory.</p>
+</div>
+
+<div id="Test3" class="tabcontent">
+  <h3>Transition</h3>
+  <p>The formation of labor unions was the primary cause of our transition from a Gesellschaft society to a gemeinschaft society. Labor Unions fought for workers' rights. Due to their eventual success, families started becoming more cooperative and moving towards a whole unit of production as the entire family took part in activities such as tending the fields and taking care of the house now that everyone was not expected to spend their entire day in a factory.</p>
+</div>
+        
+        <p>--------------------------------------------------------------------------------------------------------</p>
+        
+        <h1>Citations & Group Members</h1>
+        <ul>Group Members
+            <li>Ryan Roman - Website Programmer</li>
+            <li>De'Zarius Horne - Gemeinschaft & Gesellschaft transitional notes</li>
+            <li>Adrian Diaz - Gemeinschaft society notes</li>
+            <li>Dustin Mitchell - Gesellschaft society notes</li>
+        </ul>
+        
+        <ul>Citations
+            <li><a href='http://www.sbctc.org/doc.asp?id=4463'>SBCTC</a></li>
+            <li><a href='https://www.unionplus.org/about/labor-unions/history-origin'>UnionPlus</a></li>
+            <li><a href='http://webs.bcp.org/sites/vcleary/ModernWorldHistoryTextbook/IndustrialRevolution/IREffects.html'>BCP</a></li>
+        </ul>
+        
+    </body>
+    
+</html>
